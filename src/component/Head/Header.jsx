@@ -1,14 +1,13 @@
 import React, { useState } from "react"
-import "./header.css"
-import logo from "../pic/logo.png"
+import "./header.scss"
+import logo from "../../assets/logo.png"
 
 const Header = () => {
-  // fixed Header
+
   window.addEventListener("scroll", function () {
     const header = document.querySelector(".header")
     header.classList.toggle("active", window.scrollY > 100)
   })
-  // Toogle Menu
   const [Mobile, setMobile] = useState(false)
   return (
     <>
@@ -34,7 +33,7 @@ const Header = () => {
                 <a href='#resume'>resume</a>
               </li>
               <li>
-                <a href='#clients'>clients</a>
+                <a href='#clients'>testimonials</a>
               </li>
               <li>
                 <a href='#blog'>blog</a>
@@ -42,9 +41,7 @@ const Header = () => {
               <li>
                 <a href='#contact'>contact</a>
               </li>
-              <li>
-                <button className='home-btn'>BUY NOW</button>
-              </li>
+              
             </ul>
 
             <button className='toggle' onClick={() => setMobile(!Mobile)}>
