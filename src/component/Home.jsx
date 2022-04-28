@@ -1,9 +1,6 @@
 import React from "react"
-import Profile from "../assets/Profile_nobg.png"
-import { BsLinkedin } from 'react-icons/bs'
-import skill1 from "./pic/skill1.png"
-import skill2 from "./pic/skill2.png"
-import skill3 from "./pic/skill3.png"
+// import Profile from "../assets/Profile_nobg.png"
+import { BsLinkedin, BsFacebook, BsInstagram } from 'react-icons/bs'
 import { Typewriter } from "react-simple-typewriter"
 import "./Home.scss"
 
@@ -18,7 +15,7 @@ const Home = () => {
               Hi, I’m <span>Dzung Le</span>
             </h1>
             <h2>
-              <span>
+              <span style={{ color: '#a3bcb1' }}>
                 <Typewriter words={[" Regulatory Compliance Advisor.", " Anti-Money Laundering Specialist."]} loop cursor cursorStyle='|' typeSpeed={70} deleteSpeed={50} delaySpeed={1000} />
               </span>
             </h2>
@@ -28,35 +25,26 @@ const Home = () => {
                 <h4>FIND WITH ME</h4>
                 <div className='button'>
                   <button className='btn_shadow'>
-                    <a href="https://uk.linkedin.com/in/lehuongdung" target="_blank" rel="noreferrer"></a>
-                    <BsLinkedin />
+                    <a href="https://uk.linkedin.com/in/lehuongdung" target="_blank" rel="noreferrer"><BsLinkedin /></a>
                   </button>
                   <button className='btn_shadow'>
-                    <i></i>
+                    <a><BsFacebook /></a>
                   </button>
                   <button className='btn_shadow'>
-                    <i></i>
+                    <a><BsInstagram /></a>
                   </button>
                 </div>
               </div>
               <div className='home_btn-col2'>
                 <h4>BEST SKILL ON</h4>
-                <button className='btn_shadow'>
-                  <img src={skill1} alt='' />
-                </button>
-                <button className='btn_shadow'>
-                  <img src={skill2} alt='' />
-                </button>
-                <button className='btn_shadow'>
-                  <img src={skill3} alt='' />
-                </button>
+                <li className="home_skills">Dedicated and multi-tasking legal professional with 8+ years of experience.</li>
+                <li className="home_skills">Detail-oriented and ambitious legal professional passionately committed to working in international legal co-operation, private and public international law, financial compliance and regulations.</li>
+                <li className="home_skills">Self-motivated lifelong learner with demonstrated interest in RegTech, Blockchain, DeFi, NFT, Meta and working across borders toward common goals.</li>
+                <li className="home_skills">Highly organised and reliable colleague with enthusiastic and personable approach to collaboration.</li>
               </div>
             </div>
           </div>
           <div className='home_right'>
-            <div className='home_right-img'>
-              <img src={Profile} alt='profile picture' />
-            </div>
           </div>
         </div>
       </div>

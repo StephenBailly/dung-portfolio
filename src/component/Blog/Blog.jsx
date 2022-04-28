@@ -1,6 +1,6 @@
 import React from "react"
-import "../Portfolio/Projects.css"
-import "../Blog/Blog.css"
+import "../Portfolio/Projects.scss"
+import "../Blog/Blog.scss"
 import Card from "./Card"
 import BlogApi from "./BlogApi"
 

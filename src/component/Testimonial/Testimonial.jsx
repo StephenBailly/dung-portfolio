@@ -1,57 +1,56 @@
-import React, { useState, useEffect } from "react"
-import "./Testimonial.css"
-import Slide from "./Slide"
+import React, { useState } from "react"
+import { FaArrowLeft, FaArrowRight, FaQuoteRight, FaQuoteLeft } from 'react-icons/fa'
 import TestimonialApi from "./TestimonialApi"
+import "./Testimonial.scss"
 
 const Testimonial = () => {
-  const [data, setdata] = useState(TestimonialApi)
-  const [index, setIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const lastIndex = data.length - 1
-    if (index < 0) {
-      setIndex(lastIndex)
-    }
-    if (index > lastIndex) {
-      setIndex(0)
-    }
-  }, [index, data])
+  const handleClick = (index) => {
+    setCurrentIndex(index);
+  }
 
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex(index + 1)
-    }, 3000)
-    return () => clearInterval(slider)
-  }, [index])
+  const testim = TestimonialApi[currentIndex];
 
   return (
     <>
-      <section className='Testimonial' id='clients'>
-        <div className='container'>
-          <div className='heading text-center'>
-            <h4>WHAT FORMER EMPLOYERS SAY</h4>
-            <h1>Testimonial</h1>
-          </div>
-          <div className='slide'>
-            {/*{TestimonialApi.map((val, index) => {
-              return <Slide key={index} image={val.image} design={val.design} name={val.name} offcer={val.offcer} post={val.post} date={val.date} desc={val.desc} />
-            })}*/}
-
-            {data.map((value, valueIndex) => {
-              return <Slide key={value.id} {...value} valueIndex={valueIndex} index={index} />
-            })}
-
-            <div className='slide_button'>
-              <button className='btn_shadow prev_btn' onClick={() => setIndex(index - 1)}>
-                <i class='fas fa-arrow-left'></i>
-              </button>
-              <button className='btn_shadow next_btn' onClick={() => setIndex(index + 1)}>
-                <i class='fas fa-arrow-right'></i>
-              </button>
+      {TestimonialApi.length && (
+        <>
+          <div className='testimonial' id='testimonials'>
+            <div className='testimonial_container'>
+              <div className='testitmonial_container-header'>
+                <h4>WHAT FORMER EMPLOYERS SAY</h4>
+                <h1>Testimonial</h1>
+              </div>
+              <div className='slide'>
+                <div className='slide_button'>
+                  <button className='btn_shadow prev_btn' onClick={() => handleClick(currentIndex === 0 ? TestimonialApi.length - 1 : currentIndex - 1)}>
+                    <FaArrowLeft />
+                  </button>
+                  <button className='btn_shadow next_btn' onClick={() => handleClick(currentIndex === TestimonialApi.length - 1 ? 0 : currentIndex + 1)}>
+                  <FaArrowRight />
+                  </button>
+                </div>
+                <div className="slide-bottom">
+                <div className='quote'>
+                  <FaQuoteLeft />
+                </div>
+                <div className="right">
+                  <div className="content box_shadow">
+                    <h1>{testim.name} - {testim.post}</h1>
+                    <h3>{testim.offcer}</h3>
+                    <p>{testim.desc}</p>
+                  </div>
+                </div>
+                <div className="quote">
+                <FaQuoteRight />
+                </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </>
+      )}
     </>
   )
 }

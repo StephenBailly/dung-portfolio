@@ -1,6 +1,8 @@
 import React, { useState } from "react"
-import contact1 from "./contact1.png"
-import "./Contact.css"
+import { BsLinkedin, BsFacebook, BsInstagram } from 'react-icons/bs'
+import sbLogo from "../assets/sblogo.png"
+import contact from "../assets/contact.jpg"
+import "./Contact.scss"
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -8,7 +10,8 @@ const Contact = () => {
     phone: "",
     email: "",
     subject: "",
-    message: "",})
+    message: "",
+  })
 
   const InputEvent = (event) => {
     const { name, value } = event.target
@@ -34,49 +37,48 @@ const Contact = () => {
   }
   return (
     <>
-      <section className='Contact' id='contact'>
-        <div className='container top'>
-          <div className='heading text-center'>
+      <section className='contact' id='contact'>
+        <div className='contact_container'>
+          <div className='contact_container-header'>
             <h4>CONTACT</h4>
-            <h1>Contact With Me</h1>
+            <h1>Connect With Me</h1>
           </div>
-
-          <div className='content d_flex'>
-            <div className='left'>
-              <div className='box box_shodow'>
-                <div className='img'>
-                  <img src={contact1} alt='' />
-                </div>
+          <div className='contact_container-content'>
+            <div className='contact_left'>
+              <div className='contact_left-box'>
                 <div className='details'>
-                  <h1>Nevine Acotanza</h1>
-                  <p>Chief Operating Officer</p>
-                  <p>I am available for freelance work. Connect with me via and call in to my account.</p> <br />
-                  <p>Phone: +01234567890</p>
-                  <p>Email: admin@example.com</p> <br />
-                  <span>FIND WITH ME</span>
-                  <div className='button f_flex'>
-                    <button className='btn_shadow'>
-                      <i className='fab fa-facebook-f'></i>
-                    </button>
-                    <button className='btn_shadow'>
-                      <i className='fab fa-instagram'></i>
-                    </button>
-                    <button className='btn_shadow'>
-                      <i className='fab fa-twitter'></i>
-                    </button>
+                  <h1>Huong Dung Le</h1>
+                  <p>I am available for freelance work.</p> <br />
+                  {/* <p>Phone: </p> */}
+                  <p>Email: lhdlondon18@gmail.com</p> <br />
+                  <div className='details_social'>
+                    <h4>FIND WITH ME</h4>
+                    <div className='button'>
+                      <button className='button_social'>
+                        <a href="https://uk.linkedin.com/in/lehuongdung" target="_blank" rel="noreferrer"><BsLinkedin /></a>
+                      </button>
+                      <button className='button_social'>
+                        <a><BsFacebook /></a>
+                      </button>
+                      <button className='button_social'>
+                        <a><BsInstagram /></a>
+                      </button>
+                    </div>
                   </div>
                 </div>
+                <div className="contact_left-img">
+                <img src={contact} alt="contact img" />
+              </div>
               </div>
             </div>
-
-            <div className='right box_shodow'>
+            <div className='contact_right'>
               <form onSubmit={formSubmit}>
-                <div className='f_flex'>
-                  <div className='input row'>
+                <div className='contact_right-top'>
+                  <div className='input-name'>
                     <span>YOUR NAME</span>
                     <input type='text' name='fullname' value={data.fullname} onChange={InputEvent} />
                   </div>
-                  <div className='input row'>
+                  <div className='input-phone'>
                     <span>PHONE NUMBER </span>
                     <input type='number' name='phone' value={data.phone} onChange={InputEvent} />
                   </div>
@@ -93,12 +95,17 @@ const Contact = () => {
                   <span>YOUR MESSAGE </span>
                   <textarea cols='30' rows='10' name='message' value={data.message} onChange={InputEvent}></textarea>
                 </div>
-                <button className='btn_shadow'>
-                  SEND MESSAGE <i className='fa fa-long-arrow-right'></i>
+                <button>
+                  SEND MESSAGE
                 </button>
               </form>
             </div>
           </div>
+        </div>
+        <div className="footer_logo">
+          <p>©2022 Made with 💜 by </p>
+          <a href="https://stephenbailly.com" target="_blank" rel="noreferrer"><img src={sbLogo} alt="web developer logo" /></a>
+          
         </div>
       </section>
     </>

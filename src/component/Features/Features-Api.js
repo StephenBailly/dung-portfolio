@@ -1,39 +1,36 @@
+import mR from '../../assets/MarketResearch.jpg';
+import aDi from '../../assets/analysingData.png'
+import sC from '../../assets/stayCompliant.jpg'
+import pE from '../../assets/protectEarth.jpg'
+
 const data = [
   {
     id: 1,
-    image: "https://img.icons8.com/ios/64/000000/menu.png",
-    title: "Business Stratagy",
-    desc: "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+    image: `${mR}`,
+    title: "Market Research",
+    desc: "We help you to stay up-to-date with the most current market trend by providing a deep market research.",
+    tags: ["#Market Research", ""]
   },
   {
     id: 2,
-    image: "https://img.icons8.com/ios/40/000000/open-book.png",
-    title: "App Development",
-    desc: " It uses a dictionary of over 200 Latin words, combined witha handful of model sentence.",
+    image: `${aDi}`,
+    title: "Analysing Data & Information",
+    desc: "We work with you to understand your business structure, capabilities and processes to enable your strategy and to identify solutions for smart automation and improvement.",
+    tags: ["#Analysing Data & Information", ""]
   },
   {
     id: 3,
-    image: "https://img.icons8.com/fluency-systems-regular/64/000000/retro-tv.png ",
-    title: "App Development",
-    desc: "I throw myself down among the tall grass by the stream as I lie close to the earth.",
+    image: `${sC}`,
+    title: "Stay Compliant",
+    desc: "We provide structures, processes and technology recommendations for your GRC (Governance, Risk and Compliance) integration.",
+    tags: ["#Regulatory Compliance and Financial Crimes Prevention #Risk Management "]
   },
   {
     id: 4,
-    image: "https://img.icons8.com/material-outlined/64/000000/topic--v1.png ",
-    title: "Mobile App",
-    desc: "There are many variations of passages of Lorem Ipsum	available, but the majority.",
-  },
-  {
-    id: 5,
-    image: "https://img.icons8.com/ios-filled/64/000000/wifi.png ",
-    title: "CEO Marketing",
-    desc: "always free from repetition, injected humour, or non-characteristic words etc.",
-  },
-  {
-    id: 6,
-    image: "https://img.icons8.com/glyph-neue/50/000000/polyline.png ",
-    title: "Personal Portfolio April",
-    desc: " It uses a dictionary of over 200 Latin words, combined with a handful of model sentence.",
-  },
+    image: `${pE}`,
+    title: "Protect The Earth",
+    desc: "Our partners provide tools to help calculate and offset your carbon footprint. We offer the easiest way for your business to become environmentally sustainable. ",
+    tags: ["#Environmentally Sustainable", ""]
+  }
 ]
 export default data

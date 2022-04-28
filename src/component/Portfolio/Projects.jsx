@@ -1,41 +1,31 @@
 import React from "react"
-import "./Projects.css"
-import Card from "./Card"
-import Portfolio_data from "./Portfolio_data"
+import PortfolioData from "./Portfolio_data"
+import "./Projects.scss"
 
 const Portfolio = () => {
   return (
     <>
-      <section className='Portfolio top' id='portfolio'>
-        <div className='container'>
-          <div className='heading text-center '>
-            <h4>VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK</h4>
-            <h1>My Portfolio</h1>
-          </div>
-
-          <div className='content grid'>
-            {Portfolio_data.map((value, index) => {
-              return <Card key={index} image={value.image} category={value.category} totalLike={value.totalLike} title={value.title} />
-            })}
-
-            {/*<div className='box btn_shadow '>
-              <div className='img'>
-                  <img src='https://rainbowit.net/html/inbio/assets/images/portfolio/portfolio-01.jpg' alt='' />
+      <section className='portfolio' id='portfolio'>
+        <div className='portfolio_container-title heading'>
+          <h4>I have been lucky to work with a variety range of organisations and corporations.</h4>
+          <h1>My Portfolio</h1>
+        </div>
+        <div className='portfolio_container'>
+          {PortfolioData.map(data => (
+            <div className='portfolio_card'>
+              <div className='portfolio_card-img'>
+                <img src={data.image} alt={data.title} />
               </div>
-              <div className='category d_flex'>
-                  <span>Development</span>
-                  <label>
-                    <i className='far fa-heart'></i> 360
-                  </label>
+              <div className="portfolio_card-content">
+                <div className='portfolio_card-title'>
+                  <h2>{data.title}</h2>
+                </div>
+                <div className='portfolio_category'>
+                  <span>{data.category}</span>
+                </div>
               </div>
-              <div className='title'>
-                  <h2>Mobile app landing design & Services</h2>
-                <a href='' className='arrow'>
-                  <i class='fas fa-arrow-right'></i>
-                </a>
-              </div>
-            </div>*/}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
     </>

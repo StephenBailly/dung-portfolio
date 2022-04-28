@@ -1,18 +1,26 @@
 import React from "react"
-import logo1 from "./pic/f_logo.png"
-import logo from "../assets/logo.png"
+
+import './Footer.scss'
+
+
 
 const Footer = () => {
   return (
     <>
-      <footer>
-        <div className='conatiner text-center top'>
+      {/* <footer className="footer">
+        <div className='footer_logo'>
           <div className='img'>
-            <img src={logo1} alt='' />
+            <img src={logo} alt='' />
           </div>
-          <p>© 2021. All rights reserved by <a href="https://stephenbailly.com" target="_blank" rel="noreferrer"><img src={logo} alt="" /></a></p>
+          <div className="footer_logo">
+          <p>©2022. Made by
+            <a href="https://stephenbailly.com" target="_blank" rel="noreferrer">
+              <img src={sbLogo} alt="" />
+            </a>
+          </p>
+          </div>
         </div>
-      </footer>
+      </footer> */}
     </>
   )
 }

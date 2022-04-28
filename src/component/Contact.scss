@@ -1,0 +1,189 @@
+.contact {
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .footer_logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .contact_container {
+    margin-bottom: 4rem;
+    width: 90%;
+
+  .button {
+    margin-top: 20px;
+
+    button {
+      margin-right: 20px;
+
+      &:hover button {
+        color: white;
+        transition: 0.5 all ease-in-out;
+      }
+      
+      a {color: var(--main-color);
+      }
+
+      &:hover a {
+        color: #fff;
+        transition: 0.5 all ease-in-out;
+      }
+    }
+  }
+
+  textarea,
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid var(--secondary-bg-color);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: var(--main-color);
+    font-weight: 600;
+  }
+
+  .contact_container-header {
+    margin: 50px 0 50px 0;
+    text-align: center;
+
+    h1 {
+      font-size: 50px;
+      color: var(--main-color);
+    }
+
+    h4 {
+      letter-spacing: 2px;
+      font-weight: 400;
+      color: var(--main-color);
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+  }
+
+  .contact_container-content {
+    gap: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .contact_left {
+      width: 30%;
+    
+      .contact_left-box {
+        text-align: center;
+        padding: 10px 0px;
+        border-radius: 6px;
+        transition: 0.3s all ease-in-out;
+        transition: 0.5s;
+        background: var(--main-bg-color);
+        box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px rgb(255, 255, 255);
+        font-size: 1.25em;
+        color: var(--main-color);
+
+        .details {
+
+          .details_social {
+
+            .button_social {
+              padding: 10px 12px;
+              border-radius: 6px;
+              transition: 0.3s all ease-in-out;
+              cursor: pointer;
+              transition: 0.5s;
+              background: var(--main-bg-color);
+              box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px rgb(255, 255, 255);
+              font-size: 1.25em;
+              color: var(--main-color);
+
+              &:hover {
+                background: var(--main-color);
+                color: white;
+                transform: translateY(-10px);
+              }
+            }
+          }
+
+        h1 {
+          margin: 20px 0 20px 0;
+          font-size: 35px;
+          color: var(--main-color);
+        }
+
+        h4 {
+          letter-spacing: 2px;
+          font-weight: 400;
+          color: var(--main-color);
+        }
+
+        p {
+          font-size: 17px;
+          color: #505255;
+        }
+
+      }
+
+        .contact_left-img {
+          margin-top: 60px;
+          width: 100%;
+  
+          img {
+            width: 300px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+
+    .contact_right {
+      width: 50%;
+      padding: 35px;
+      border-radius: 6px;
+      transition: 0.3s all ease-in-out;
+      transition: 0.5s;
+      background: var(--main-bg-color);
+      box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px rgb(255, 255, 255);
+      font-size: 1.25em;
+      color: var(--main-color);
+
+      button {
+        width: 30%;
+        color: var(--main-color);
+        font-size: 0.8em;
+        padding: 10px 12px;
+        border-radius: 6px;
+        transition: 0.3s all ease-in-out;
+        cursor: pointer;
+        transition: 0.5s;
+        background: var(--main-bg-color);
+        box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px rgb(255, 255, 255);
+        color: var(--main-color);
+        
+        &:hover {
+          background: var(--main-color);
+          color: white;
+          transform: translateY(-10px);
+        }
+      }
+
+      span {
+        font-size: 13px;
+      }
+    }
+
+    .contact_right-top {
+      display: flex;
+
+      .input-name, .input-phone {
+        width: 50%;
+        margin-right: 5px;
+      }
+    }
+  }
+}

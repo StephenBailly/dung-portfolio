@@ -1,0 +1,58 @@
+.header {
+  line-height: 6vh;
+  width: 100%;
+  height: 10vh;
+  background-color: #ecf0f3;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: -1px 11px 24px -11px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  
+
+  .header_container {
+    padding-top: 15px;
+    height: 100%;
+    display: flex;
+    max-width: 95%;
+    margin: auto;
+    
+      .logo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-top: 0.4rem;
+
+      img {
+        width: 120px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+.navlink {
+
+  .link {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    li {
+      margin-left: 30px;
+
+      a {
+        transition: 0.5s;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        color: black;
+
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+}

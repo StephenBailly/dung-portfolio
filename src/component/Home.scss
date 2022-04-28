@@ -1,38 +1,35 @@
 .home {
   position: relative;
-  margin-right: 10%;
-  margin-left: 5%;
-  margin-top: 5%;
+  margin: 0 10rem;
   
   .home_container {
     display: flex;
+    
 
     .home_left {
-      flex: 2;
-      margin-right: 10%;
+      flex: 3;
 
       h3 {
         font-weight: 100;
         letter-spacing: 2px;
+        margin-top: 10rem;
+        color: #505255;
       }
 
       h1 {
         font-size: 60px;
         font-weight: bold;
+        color: #505255;
 
         span {
-          color: var(--logo-green);
+          color: var(--main-color);
         }
       }
 
       h2 {
         font-size: 50px;
         font-weight: bold;
-        color: var(--logo-green);
-
-        span {
-          color: var(--logo-red);
-        }
+        color: var(--main-color);
       }
 
       p {
@@ -44,9 +41,10 @@
       }
 
       .home_btn {
-        margin-top: 20%;
+        margin-top: 4rem;
         display: flex;
         justify-content: space-between;
+        margin-bottom: 80px;
 
         h4 {
           font-weight: 500;
@@ -61,20 +59,53 @@
 
           a {
             font-size: 20px;
+            color: var(--main-color);
           }
 
           img {
             width: 20px;
             height: 20px;
           }
-        }  
+
+          &:hover a {
+            color: #fff;
+          }
+        }
+
+        .home_btn-col1 {
+          flex: 1;
+
+          .button {
+            display: flex;
+            flex-direction: column;
+
+            .btn_shadow {
+              width: 45px;
+              margin: 10px;
+            }
+          }
+        }
+
+        .home_btn-col2 {
+          flex: 3;
+          font-size: 0.9em;
+          text-align: left;
+
+          .home_skills {
+            margin: 1.2rem;
+            text-align: left;
+            font-size: 16px;
+            color: #878e99;
+            font-weight: 500;
+          }
+        }
       }
     }
 
     .home_right {
       flex: 1;
-      width: 40%;
-      position: relative;
+      
+      
 
       .home_right-img {
           background: linear-gradient(145deg, #e2e8ec, #ffffff);
