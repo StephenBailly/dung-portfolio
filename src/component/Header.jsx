@@ -28,9 +28,9 @@ const Header = () => {
               <li>
                 <a href='#testimonials'>testimonials</a>
               </li>
-              <li>
+              {/* <li>
                 <a href='#blog'>blog</a>
-              </li>
+              </li> */}
               <li>
                 <a href='#contact'>contact</a>
               </li>          

@@ -1,6 +1,5 @@
 import React from "react"
 import ResumeApi from "./ResumeApi"
-import Card from "./Card"
 import "./Resume.scss"
 
 const Resume = () => {
@@ -13,30 +12,41 @@ const Resume = () => {
             <h1>My Resume</h1>
           </div>
           <div className='resume_content'>
-            <div className='left'>
-              <div className='resume_content-header'>
-                <h4>2007-2010</h4>
+            <div className='resume_left'>
+              <div className='resume_left-header'>
                 <h2>Education Quality</h2>
               </div>
-              <div className='resume_content-content'>
-                {ResumeApi.map((val, id) => {
-                  if (val.category === "education") {
-                    return <Card key={id} title={val.title} year={val.year} />
+              <div className='resume_left-content'>
+                {ResumeApi.map(resume => {
+                  if (resume.category === "education") {
+                    return (
+                      <div className='resume_left-card box' key={resume.id}>
+                        <h3>{resume.year}</h3>
+                        <h4>{resume.title}</h4>
+                      </div>
+                    )
                   }
                 })}
               </div>
             </div>
-            <div className='left'>
-              <div className='resume_content-header'>
-                <h4>2007-2010</h4>
-                <h2>Job Experience</h2>
+            <div className='resume_right'>
+              <div className='resume_right-header'>
+                <h2>Field of Experience & Skills</h2>
               </div>
-              <div className='resume_content-content'>
-                {ResumeApi.map((val) => {
-                  if (val.category === "experience") {
-                    return <Card key={val.id} title={val.title} year={val.year} />
-                  }
-                })}
+              <div className='resume_right-container'>
+                <div className="resume-right_svg"></div>
+                <div className="resume_right-content">
+                  {ResumeApi.map(resume => {
+                    if (resume.category === "experience") {
+                      return (<ul>
+                      <li key={resume.id}>
+                        {resume.desc}
+                        </li>
+                        </ul>
+                      )
+                    }
+                  })}
+                </div>
               </div>
             </div>
           </div>

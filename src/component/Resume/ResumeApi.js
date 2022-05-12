@@ -1,5 +1,4 @@
-const ResumeApi = [
-  {
+const ResumeApi = [{
     id: 1,
     category: "education",
     year: "BPP University (2018 - 2019)",
@@ -21,7 +20,7 @@ const ResumeApi = [
     year: "Judicial Academy of Vietnam (2015 - 2015) ",
     location: "Hanoi, Vietnam",
     title: "Certificate of Legal Science Research Skills",
-    desc: "" 
+    desc: ""
   },
   {
     id: 4,
@@ -34,51 +33,68 @@ const ResumeApi = [
   {
     id: 5,
     category: "experience",
-    year: "Likvidi (Mar 2022 - Present)",
-    location: "London, UK",
-    title: "Compliance and Operation Advisor",
-    desc: "We deploy technologies that enable us to revolutionize the quality, speed, and cost-efficiency of the entire bond lifecycle process. We call it the Bonds-on-Blockchain platform.",
-  },
+    desc: "International Laws & Global Regulatory Compliance"
+    },
   {
     id: 6,
     category: "experience",
-    year: "Likvidi (Sept 2020 - Mar 2022)",
-    location: "Dubai, UAE",
-    title: "Head of Compliance & MLRO",
-    desc: "Likvidi Securities Ltd is a High-Yield SME (small and medium-sized enterprises) bond issuance and life cycle management firm regulated by the Dubai Financial Service Authority in the Dubai International Financial Center. Likvidi Securities Ltd a tech company dressed as Investment Bankers to offer SME's fast, affordable and safe bond issuance with a global distribution network.",
-  },
+    desc: "Automated Technology Solutions in Compliance & AML (Blockchain & AI)"
+    },
   {
-  id: 7,
+    id: 7,
     category: "experience",
-    year: "Likvidi (May 2020 - Mar 2022)",
-    location: "Dubai, UAE",
-    title: "Deputy Money Laundering Reporting Officer",
-    desc: "Likvidi Securities Ltd is a High-Yield SME (small and medium-sized enterprises) bond issuance and life cycle management firm regulated by the Dubai Financial Service Authority in the Dubai International Financial Center. Likvidi Securities Ltd a tech company dressed as Investment Bankers to offer SME's fast, affordable and safe bond issuance with a global distribution network.",
-  },
+    desc: "Fraud and illicit activity investigation"
+    },
   {
     id: 8,
-      category: "experience",
-      year: "Likvidi (Jan 2020 - Jul 2020)",
-      location: "London, UK",
-      title: "Head of Compliance & Money Laundering Reporting Officer",
-      desc: "Established as Europe’s leading token issuance and advisory platform, TokenMarket is committed to democratising investment opportunities in cutting-edge technology companies.",
+    category: "experience",
+    desc: "International Human Rights Issues"
     },
-    {
-      id: 9,
-        category: "experience",
-        year: "CryptoCheckout (Apr 2019 - Jul 2019)",
-        location: "London, UK",
-        title: "Compliance & Data Protection Officer",
-        desc: "A fintech company developing an online platform that creates solutions to make digital currency more accessible to consumers and businesses.",
-      },
-      {
-        id: 10,
-          category: "experience",
-          year: "The Department of Adoption, The Ministry of Justice of Vietnam (Sep 2013 - Jul 2017)",
-          location: "Hanoi, Vietnam",
-          title: "Public Legal Officer",
-          desc: "Contributed to international efforts at upholding Hague Convention No. 33 concerning Protection of Children and Co-operation on Intercountry Adoption. Served as point of contact for Vietnamese Central Authority and Competent Authority on Adoption. Worked for the Department of Adoption within UNICEF’s Project of Social Security for Children strengthening compliance system on intercountry adoption in Vietnam from central level to local level.",
-        },
+  {
+    id: 9,
+    category: "experience",
+    desc: "Project & Programme Management"
+    },
+  {
+    id: 10,
+    category: "experience",
+    desc: "Customer Due Diligence/Know your customer/Screening check"
+    },
+  {
+    id: 11,
+    category: "experience",
+    desc: "Anti Money Laundering Regulations"
+    },
+  {
+    id: 12,
+    category: "experience",
+    desc: "Corporate Governance"
+    },
+  {
+    id: 13,
+    category: "experience",
+    desc: "Risk Management"
+    },
+  {
+    id: 14,
+    category: "experience",
+    desc: "Networking & Relationship Building "
+    },
+  {
+    id: 15,
+    category: "experience",
+    desc: "Legal Research and Communication Skills in different jurisdictions"
+    },
+  {
+    id: 16,
+    category: "experience",
+    desc: "Team Leadership & Mentoring"
+    },
+  {
+    id: 17,
+    category: "experience",
+    desc: "Data Protection and Privacy"
+  }
 ]
 
 export default ResumeApi

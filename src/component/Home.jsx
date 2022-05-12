@@ -15,7 +15,7 @@ const Home = () => {
               Hi, I’m <span>Dzung Le</span>
             </h1>
             <h2>
-              <span style={{ color: '#a3bcb1' }}>
+              <span style={{ color: '#E38B75' }}>
                 <Typewriter words={[" Regulatory Compliance Advisor.", " Anti-Money Laundering Specialist."]} loop cursor cursorStyle='|' typeSpeed={70} deleteSpeed={50} delaySpeed={1000} />
               </span>
             </h2>

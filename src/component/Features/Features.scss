@@ -4,8 +4,7 @@
   .features_container {
     display: flex;
     flex-direction: column;
-    max-width: 95%;
-    margin: auto;
+    width: 100%;
 
     .features_container-heading {
       text-align: center;
@@ -29,7 +28,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      margin: 3rem;
+      margin: 4rem 8rem;
       gap: 5rem;
 
       .card {
@@ -39,14 +38,12 @@
         align-items: center;
         gap: 1rem;
         padding-right: 10px;
-        
         transition: 0.5s all ease-in-out;
         background: var(--main-bg-color);
         box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px rgb(255, 255, 255);
         border-radius: 10px;
         border-top-left-radius: 100px;
         border-bottom-left-radius: 100px;
-        
 
         &:hover {
           background: #fff;
@@ -64,7 +61,6 @@
             height: 200px;
             object-fit: cover;
             border-radius: 50%;
-            
           }
         }
 
@@ -92,7 +88,26 @@
             color: var(--secondary-bg-color);
           }
         }
+
+        @media screen and (max-width: 1482px) {
+          width: 50vw;
+        }
+
+        @media screen and (max-width: 1062px) {
+          width: 80vw;
+        }
+
+        @media screen and (max-width: 650px) {
+          width: 100vw;
+          
+        }
       }
-    }
+    
+      @media screen and (max-width: 1482px) {
+        margin: 0rem;
+        margin-top: 4rem;
+      }
+    }  
+    
   }
 }
