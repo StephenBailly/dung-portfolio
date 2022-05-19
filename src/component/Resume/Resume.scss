@@ -9,11 +9,19 @@
     h1 {
       font-size: 50px;
       color: var(--main-color);
+
+      @media screen and (max-width: 804px) {
+        font-size: 2.5em;
+      }
     }
 
     h2 {
       color: var(--main-color);
       font-size: 2.2em;
+
+      @media screen and (max-width: 804px) {
+        font-size: 1.8em;
+      }
     }
 
     h4 {
@@ -126,6 +134,14 @@
             }
           }
         }
+      }
+
+      @media screen and (max-width: 1100px) {
+          flex-direction: column;
+
+          .resume_left {
+            margin-bottom: 50px;
+          }
       }
     }
   }
