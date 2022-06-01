@@ -3,11 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  .footer_logo {
-    display: flex;
-    align-items: center;
-  }
+  justify-content: center;
 
   .contact_container {
     margin-bottom: 4rem;
@@ -56,8 +52,8 @@
         font-size: 50px;
         color: var(--main-color);
 
-        @media screen and (max-width: 804px) {
-          font-size: 2.5em;
+        @media screen and (max-width: 768px) {
+          font-size: 2.2em;
         }
       }
 
@@ -71,7 +67,7 @@
     }
 
     .contact_container-content {
-      gap: 5rem;
+      gap: 2rem;
       width: 100%;
       display: flex;
       align-items: center;
@@ -148,6 +144,10 @@
             }
           }
         }
+
+        @media screen and (max-width: 768px) {
+          width: 90%;
+        }
       }
 
       @media screen and (max-width: 1400px) {
@@ -194,6 +194,14 @@
       span {
         font-size: 13px;
       }
+
+      @media screen and (max-width: 768px) {
+        width: 90%;
+
+        button {
+          width: 100%;
+        }
+      }
     }
 
     .confirmation {
@@ -221,6 +229,26 @@
       .input-phone {
         width: 50%;
         margin-right: 5px;
+      }
+    }
+  }
+
+  .footer_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    margin: 50px 0 30px 0;
+
+    p {
+      font-size: 10px;
+    }
+
+    a {
+      width: 50%;
+
+      img {
+        width: 80%;
       }
     }
   }
