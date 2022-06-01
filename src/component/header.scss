@@ -9,7 +9,7 @@
   position: fixed;
   z-index: 2;
   top: 0;
-  
+
 
   .header_container {
     padding-top: 15px;
@@ -17,15 +17,16 @@
     display: flex;
     max-width: 95%;
     margin: auto;
-    
-      .logo {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        margin-top: 0.4rem;
+
+    .logo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: flex;
+      align-items: center;
 
       img {
-        width: 120px;
+        width: 119.57px;
         height: 40px;
       }
     }
@@ -33,11 +34,13 @@
 }
 
 .navlink {
+  display: flex;
 
   .link {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+    align-items: center;
 
     li {
       margin-left: 30px;
@@ -53,6 +56,89 @@
           color: var(--main-color);
         }
       }
+    }
+  }
+
+
+
+  @media screen and (max-width: 726px) {
+    .link {
+      display: none;
+    }
+  }
+
+  .burger_menu {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+
+    svg {
+      width: 70%;
+      height: 70%;
+      color: var(--secondary-color);
+    }
+
+    div {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 5;
+      padding: 1rem;
+      width: 50%;
+      height: 100vh;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: column;
+      background-color: var(--main-color);
+      box-shadow: 0 0 20px rgba(168, 168, 168, 0.9);
+
+      svg {
+        width: 35px;
+        height: 35px;
+        color: var(--secondary-color);
+        margin: 0.5rem 1rem;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        li {
+          margin: 1rem;
+
+          a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+              padding-left: 2rem;
+              letter-spacing: 5px;
+            }
+          }
+        }
+      } 
+    }
+
+    @media screen and (min-width: 726px) {
+      display: none;
     }
   }
 }

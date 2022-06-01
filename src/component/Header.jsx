@@ -1,8 +1,11 @@
-import React from "react"
-import "./header.scss"
-import logo from "../assets/logo.png"
+import React, { useState } from "react";
+import { BiMenuAltRight, BiX } from 'react-icons/bi';
+import { motion } from 'framer-motion';
+import logo from "../assets/logo.png";
+import "./header.scss";
 
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
 
   return (
     <>
@@ -13,28 +16,31 @@ const Header = () => {
           </div>
           <div className='navlink'>
             <ul className="link">
-              <li>
-                <a href='#home'>home</a>
-              </li>
-              <li>
-                <a href='#features'>features</a>
-              </li>
-              <li>
-                <a href='#portfolio'>portfolio</a>
-              </li>
-              <li>
-                <a href='#resume'>resume</a>
-              </li>
-              <li>
-                <a href='#testimonials'>testimonials</a>
-              </li>
-              {/* <li>
-                <a href='#blog'>blog</a>
-              </li> */}
-              <li>
-                <a href='#contact'>contact</a>
-              </li>          
+              {['home', 'features', 'portfolio', 'resume', 'testimonials', 'contact'].map((item) => (
+                <li key={`link-${item}`}>
+                  <a href={`#${item}`}>{item}</a>
+                </li>
+              ))}
             </ul>
+            <div className="burger_menu">
+              <BiMenuAltRight onClick={() => setToggle(true)} />
+
+              {toggle && (
+                <motion.div
+                  whileInView={{ x: [300, 0] }}
+                  transition={{ duration: 0.85, ease: 'easeOut' }}
+                >
+                  <BiX onClick={() => setToggle(false)} />
+                  <ul>
+                    {['home', 'features', 'portfolio', 'resume', 'testimonials', 'contact'].map((item) => (
+                      <li key={item}>
+                        <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </div>
           </div>
         </div>
       </div>
