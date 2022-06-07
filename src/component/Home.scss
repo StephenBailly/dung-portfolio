@@ -1,6 +1,11 @@
 .home {
   width: 100%;
   position: relative;
+  // background-image: url(../assets/19366.jpg);
+  // background-repeat: no-repeat;
+  // background-size: 100% 100%;
+  // background-position: right;
+
   
   .home_container {
     display: flex;
@@ -136,25 +141,14 @@
 
     .home_right {
       flex: 1;
+      margin-top: 150px;
+      
+      img {
+        
+      }
       
       @media screen and (max-width: 1000px) {
         display: none;
-      }
-
-      .home_right-img {
-          background: linear-gradient(145deg, #e2e8ec, #ffffff);
-          box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
-          border-radius: 10px;
-          height: 580px;
-          width: 510px;
-          margin-top: 20%;
-
-          img {
-            position: absolute;
-            top: 0;
-            right: 10%;
-            width: 510px;
-          }
       }
     }
 

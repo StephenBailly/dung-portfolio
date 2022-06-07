@@ -1,5 +1,5 @@
 import React from "react"
-// import Profile from "../assets/Profile_nobg.png"
+import homePic from "../assets/blueCircle.jpg"
 import { BsLinkedin, BsFacebook, BsInstagram } from 'react-icons/bs'
 import { Typewriter } from "react-simple-typewriter"
 import "./Home.scss"
@@ -44,8 +44,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className='home_right'>
-          </div>
+          {/* <div className='home_right'>
+            <img src={homePic} alt="" />
+          </div> */}
         </div>
       </div>
     </>

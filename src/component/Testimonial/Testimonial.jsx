@@ -6,11 +6,15 @@ import "./Testimonial.scss"
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handleClick = (index) => {
-    setCurrentIndex(index);
-  }
+  const handleClick = (direction) => {
+    if (direction === "left") {
+        setCurrentIndex(currentIndex === 0 ? TestimonialApi.length - 1 : currentIndex - 1)
+    } else {
+        setCurrentIndex(currentIndex === TestimonialApi.length - 1 ? 0 : currentIndex + 1)
+    }
+};
 
-  const testim = TestimonialApi[currentIndex];
+  const transForm = { transform: `translateX(${currentIndex * -670}px)`};
 
   return (
     <>
@@ -24,23 +28,27 @@ const Testimonial = () => {
               </div>
               <div className='slide'>
                 <div className='slide_button'>
-                  <button className='btn_shadow prev_btn' onClick={() => handleClick(currentIndex === 0 ? TestimonialApi.length - 1 : currentIndex - 1)}>
+                  <button className='btn_shadow prev_btn' direction="left" onClick={() => handleClick("left")}>
                     <FaArrowLeft />
                   </button>
-                  <button className='btn_shadow next_btn' onClick={() => handleClick(currentIndex === TestimonialApi.length - 1 ? 0 : currentIndex + 1)}>
+                  <button className='btn_shadow next_btn' direction="right" onClick={() => handleClick("right")}>
                   <FaArrowRight />
                   </button>
                 </div>
-                <div className="slide-bottom">
+                <div className="slide-content">
                 <div className='quote'>
                   <FaQuoteLeft />
                 </div>
-                <div className="right">
+                <div className="slide-bottom">
+                <div className="right" style={transForm}>
+                  {TestimonialApi.map(testim => (               
                   <div className="content box_shadow">
                     <h1>{testim.name} - {testim.post}</h1>
                     <h3>{testim.offcer}</h3>
                     <p>{testim.desc}</p>
-                  </div>
+                  </div>                 
+                  ))}
+                </div>
                 </div>
                 <div className="quote">
                 <FaQuoteRight />
