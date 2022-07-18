@@ -8,8 +8,8 @@ const Resume = () => {
       <section className='resume' id='resume'>
         <div className='resume_container'>
           <div className='resume_header'>
-            <h4>7+ YEARS OF EXPERIENCE</h4>
-            <h1>My Resume</h1>
+            <h4>8+ YEARS OF EXPERIENCE</h4>
+            <h1>Background</h1>
           </div>
           <div className='resume_content'>
             <div className='resume_left'>

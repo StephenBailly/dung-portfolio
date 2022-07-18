@@ -14,7 +14,7 @@ const Testimonial = () => {
     }
 };
 
-  const transForm = { transform: `translateX(${currentIndex * -670}px)`};
+  const transForm = { transform: `translateX(${currentIndex * -340}px)`};
 
   return (
     <>

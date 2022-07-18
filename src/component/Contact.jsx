@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-import { BsLinkedin, BsFacebook, BsInstagram } from 'react-icons/bs'
+import { BsLinkedin } from 'react-icons/bs'
 import sbLogo from "../assets/sblogo.png"
 import contact from "../assets/contact.jpg"
 import emailjs from 'emailjs-com';
@@ -45,28 +45,26 @@ const Contact = () => {
         <div className='contact_container'>
           <div className='contact_container-header'>
             <h4>CONTACT</h4>
-            <h1>Connect With Me</h1>
+            <h1>How To Reach Us</h1>
           </div>
           <div className='contact_container-content'>
             <div className='contact_left'>
               <div className='contact_left-box'>
                 <div className='details'>
-                  <h1>Huong Dung Le</h1>
-                  <p>I am available for freelance work.</p> <br />
-                  {/* <p>Phone: </p> */}
+                  <h1>Dzung Le</h1>
                   <p>Email: lhdlondon18@gmail.com</p> <br />
                   <div className='details_social'>
-                    <h4>FIND WITH ME</h4>
+                    <h4>FIND ME ON LINKEDIN</h4>
                     <div className='button'>
                       <button className='button_social'>
                         <a href="https://uk.linkedin.com/in/lehuongdung" target="_blank" rel="noreferrer"><BsLinkedin /></a>
                       </button>
-                      <button className='button_social'>
+                      {/* <button className='button_social'>
                         <a><BsFacebook /></a>
                       </button>
                       <button className='button_social'>
                         <a><BsInstagram /></a>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 </div>
@@ -104,7 +102,7 @@ const Contact = () => {
                 </form>
                 : <div className='confirmation'>
                     <h3 >Thank you for getting in touch!</h3>
-                    <p>I will get back to you as soon as I'll acknowledge your request!</p>
+                    <p>We will get back to you shortly!</p>
                 </div>}
             </div>
           </div>

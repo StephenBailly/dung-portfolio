@@ -18,7 +18,7 @@ const TestimonialApi = [
     name: "Prof. Dr. Sc. La Ngoc Khue",
     offcer: "Former Vice Minister",
     post: "Ministry of Transports, Vietnam",
-    desc: "Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris hendrerit ante. Ut tincidunt est ac dolor aliquam sodales phasellus smauris.",
+    desc: "Possesses required international standard administrative skills in managing, maintaining and updating records with thorough details, attention and accuracy.",
   },
   {
     id: 4,

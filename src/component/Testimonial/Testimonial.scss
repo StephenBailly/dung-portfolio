@@ -1,15 +1,17 @@
 .testimonial {
+  padding-top: 120px;
 
   .testimonial_container {
+    
 
     .testitmonial_container-header {
       text-align: center;
 
       h4 {
-        color: var(--main-color);
+        color: var(--grey-color);
         letter-spacing: 2px;
         font-weight: 400;
-        margin-top: 80px;
+        font-size: 20px;
       }
 
       h1 {
@@ -36,7 +38,7 @@
         align-items: center;
 
         .slide-bottom {
-          width: 670px;
+          width: 340px;
           height: 500px;
           display: flex;
           justify-content: center;
@@ -69,7 +71,7 @@
           .content {
             padding: 30px;
             margin: 40px 10px 0 10px;
-            min-width: 650px;
+            min-width: 320px;
             height: 314px;
             display: flex;
             flex-direction: column;
@@ -79,25 +81,28 @@
 
             h1 {
               font-weight: 500;
-              font-size: 1.3em;
-              margin-bottom: 20px;
+              font-size: 1.1em;
+              margin-bottom: 10px;
               color: var(--main-color);
             }
 
             h3 {
               font-size: 18px;
               font-weight: 400;
-              margin-bottom: 30px;
+              margin-bottom: 10px;
               color: var(--secondary-bg-color);
+              font-size: 0.9em;
             }
 
             p {
               color: var(--grey-color);
+              font-size: 0.8em;
+              text-align: left;
             }
 
             @media screen and (max-width: 804px) {
 
-              padding: 15px;
+              padding: 10px;
               height: 240px;
 
 

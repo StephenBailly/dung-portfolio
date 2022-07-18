@@ -1,6 +1,6 @@
 .resume {
   background-color: var(--main-bg-color);
-  margin-bottom: 5rem;
+  padding-top: 20px;
   width: 100vw;
 
   .resume_container {
@@ -25,7 +25,7 @@
     }
 
     h4 {
-      letter-spacing: 2px;
+      letter-spacing: 0px;
       font-weight: 400;
       color: var(--grey-color);
     }
@@ -58,7 +58,7 @@
           gap: 2rem;
 
           .resume_left-card {
-            width: 380px;
+            width: 370px;
             height: 150px;
             border-radius: 6px;
             transition: 0.5s all ease-in-out;
@@ -81,13 +81,17 @@
 
             h3 {
               font-size: 1em;
-              letter-spacing: 2px;
+              letter-spacing: 0px;
               font-weight: 600;
               margin-bottom: 1rem;
             }
 
             h4 {
               font-size: 0.85em;
+            }
+
+            @media screen and (max-width: 500px) {
+              width: 300px;
             }
           }
         }
@@ -107,13 +111,9 @@
           justify-content: center;
           text-align: left;
 
-          // background-color: var(--main-color);
-          // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-          // padding-right: 4rem;
-
           .resume_right-content {
             color: var(--grey-color);
-            line-height: 50px;
+            line-height: 45px;
             font-weight: 100;
             font-style: italic;
 
@@ -131,6 +131,12 @@
 
             li::marker {
               font-size: 2em;
+            }
+
+            @media screen and (max-width: 600px) {
+              font-size: 0.75em;
+              line-height: 20px;
+              width: 300px;
             }
           }
         }

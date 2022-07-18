@@ -8,7 +8,7 @@ const Portfolio = () => {
       <section className='portfolio' id='portfolio'>
         <div className='portfolio_container-title heading'>
           <h4>I have been lucky to work with a variety range of organisations and corporations.</h4>
-          <h1>My Portfolio</h1>
+          <h1>Portfolio</h1>
         </div>
         <div className='portfolio_container'>
           {PortfolioData.map(data => (

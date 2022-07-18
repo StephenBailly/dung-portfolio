@@ -1,5 +1,6 @@
 .features {
   background-color: var(--main-bg-color);
+  padding-top: 100px;
 
   .features_container {
     display: flex;
@@ -13,7 +14,6 @@
         color: var(--grey-color);
         letter-spacing: 2px;
         font-weight: 400;
-        margin-top: 80px;
         font-size: 20px;
       }
 
