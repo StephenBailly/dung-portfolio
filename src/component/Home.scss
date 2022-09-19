@@ -19,7 +19,7 @@
       h3 {
         font-weight: 100;
         letter-spacing: 2px;
-        margin-top: 10rem;
+        margin-top: 8rem;
         color: #505255;
       }
 
@@ -155,10 +155,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-top: -10rem;
       
       img {
-        width: 700px;
-        height: 700px;
+        width: 600px;
+        height: 600px;
         border-radius: 50%;
         object-fit: cover;
         margin-top: 50px;

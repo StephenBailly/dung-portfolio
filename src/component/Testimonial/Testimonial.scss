@@ -1,5 +1,5 @@
 .testimonial {
-  padding-top: 120px;
+  padding-top: 4rem;
 
   .testimonial_container {
     
@@ -33,13 +33,13 @@
       justify-content: center;
 
       .slide-content {
-
         display: flex;
         align-items: center;
+        height: 450px;
 
         .slide-bottom {
           width: 340px;
-          height: 500px;
+          height: 400px;
           display: flex;
           justify-content: center;
           align-items: center;
